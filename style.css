@@ -1,0 +1,47 @@
+body{
+    background-color: white;
+}
+
+.container{
+    justify-content: center;
+    width: 85%;
+    height: auto;
+    padding: 10px;
+    padding-top: 15;
+    margin-bottom: 20px;
+    left: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    background-color: aliceblue;
+    text-align: center;
+    font: normal 18px 'Cookie',cursive;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+#custForm{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+
+
+.numInput{
+    width:50%;
+}
+
+.sliderInput{
+    width: 100%;
+}
+
+#result{
+    text-align: center;
+}
+
+#lastPasswords{
+    margin-bottom: 20px;
+}

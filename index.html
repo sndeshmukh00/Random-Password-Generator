@@ -1,8 +1,83 @@
 <html>
-	<head>
-		<title>Random Secure Password Generator</title>
-	</head>
-	<body>
-		
-	</body>
-</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand">Secure Random Password Generator</a>
+    </nav>
+    <br><br>
+    <div class="container">
+        <div id="form">
+            <h1>Password Generator</h1>
+
+
+            <div class="input-group mb-3">
+                <input class="form-control" type="text" id="result" placeholder="Password will be displayed here...">
+                <button onclick="copyToClipboard()" class="btn btn-dark" id="clipboard" title="Copy to Clipboard">
+                    <i><svg class="bi bi-clipboard" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                            <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                        </svg></i>
+                </button>
+
+            </div>
+            <input class="sliderInput" type="range" min="1" max="50" value="15" id="lengthRange" title="
+Number of Characters">
+
+
+            <div id="custForm">
+
+
+                <label for="length">Password Length</label>
+                <input type="number" id="length" min="1" max="50" value="15">
+
+
+
+                <label for="lowercase">Include Lowercase</label>
+                <input type="checkbox" id="lowercase" checked>
+
+
+
+                <label for="uppercase">Include Uppercase</label>
+                <input type="checkbox" id="uppercase" checked>
+
+
+
+                <label for="numbers">Include Numbers</label>
+                <input type="checkbox" id="numbers" checked>
+
+
+
+                <label for="symbols">Include Symbols</label>
+                <input type="checkbox" id="symbols" checked>
+
+                <button class="btn btn-dark btn-lg btn-block" style="grid-column: span 2;" type="submit" id="generate" onclick="generate()">Generate Password</button>
+
+            </div>
+
+
+        </div>
+    </div>
+    <br><br>
+    <div class="container">
+        <b>Previously Generated Passwords</b>
+        <div id="lastPasswords"></div>
+    </div>
+    <br>
+    <br>
+
+    <div class="alert alert-info" role="alert" style="text-align: center;">
+       The fully Secure Password has a minimum length of 8-10 characters, including Uppercase characters, Lowercase characters, Numbers & Special characters. <br> A Web Application by <a href="https://www.linkedin.com/in/ambalika-sharma-1782601a9/">Ambalika Sharma</a> & <a href="https://www.linkedin.com/in/shesh-narayan-deshmukh-8b6479185/">Shesh Narayan Deshmukh</a>. <br> Students of <a href="https://csitdurg.in/">CSIT, Durg</a>.
+    </div>
+    
+
+</body></html>
