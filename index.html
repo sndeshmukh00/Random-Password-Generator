@@ -28,7 +28,8 @@
                             <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
                         </svg></i>
                 </button>
-
+               
+                
             </div>
             <input class="sliderInput" type="range" min="1" max="50" value="15" id="lengthRange" title="
 Number of Characters">
@@ -61,6 +62,9 @@ Number of Characters">
                 <input type="checkbox" id="symbols" checked>
 
                 <button class="btn btn-dark btn-lg btn-block" style="grid-column: span 2;" type="submit" id="generate" onclick="generate()">Generate Password</button>
+                
+                <button class="btn btn-dark btn-lg btn-block" id="clearLastPass" style="grid-column: span 2"; onclick="delpass()">Clear Recent Passwords</button>
+                
 
             </div>
 
@@ -70,7 +74,8 @@ Number of Characters">
     <br><br>
     <div class="container">
         <b>Previously Generated Passwords</b>
-        <div id="lastPasswords"></div>
+        <ul id="lastPasswords"></ul>
+<!--        <div id="lastPasswords"></div>-->
     </div>
     <br>
     <br>
@@ -78,6 +83,8 @@ Number of Characters">
     <div class="alert alert-info" role="alert" style="text-align: center;">
        The fully Secure Password has a minimum length of 8-10 characters, including Uppercase characters, Lowercase characters, Numbers & Special characters. <br> A Web Application by <a href="https://www.linkedin.com/in/ambalika-sharma-1782601a9/">Ambalika Sharma</a> & <a href="https://www.linkedin.com/in/shesh-narayan-deshmukh-8b6479185/">Shesh Narayan Deshmukh</a>. <br> Students of <a href="https://csitdurg.in/">CSIT, Durg</a>.
     </div>
+    
+    
     
 
 </body></html>
