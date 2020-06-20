@@ -1,18 +1,18 @@
 /* eslint-env es6 */
 /* eslint-disable */
 
-const lengthRange = document.getElementById('lengthRange');
+const Range = document.getElementById('lengthRange');
 const length = document.getElementById('length');
 
 
 length.addEventListener('input',syncLength)
-lengthRange.addEventListener('input',syncLength)
+Range.addEventListener('input',syncLength)
 
 
 function syncLength(e){
     const value = e.target.value
     length.value=value
-    lengthRange.value=value
+    Range.value=value
 }
 
 
@@ -34,7 +34,7 @@ function generate() {
     if(lowerCase + upperCase + number + symbol <= 0)
         return;
     
-    for(let i = 0; i<length; i++){
+    for(let i = 0; i<length; i++){              
         
         const r = generater(0, 3);
         if(lowerCase && r === 0){
@@ -85,5 +85,20 @@ function copyToClipboard(){
     
     alert("Password Copied to Clipboard!");
 }
+
+
+
+function delpass()
+{   
+
+     document.getElementById("lastPasswords").innerHTML = ""; 
+    
+   
+     alert("Last generated password deleted!");
+
+}
+
+
+
 
 
